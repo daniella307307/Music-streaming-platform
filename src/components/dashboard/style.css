@@ -1,0 +1,7 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+.container{
+    background: linear-gradient(135deg, #30022e, #0B1A4A);
+    width: 100%;
+    color: whitesmoke;
+}
