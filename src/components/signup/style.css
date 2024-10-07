@@ -1,0 +1,38 @@
+#bg{
+    background-image: url('./headsets.jpg') cover center center no-repeat ;
+    overflow-y: scroll; 
+}
+#sign{
+    border: 1px solid #bd16b7 ;
+    box-shadow: 0 0 3em #bd16b7;
+    padding: 5em;
+    z-index: 1;
+    border-radius: 3em;
+    width: 50%;
+}
+#sign::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: -1; /* Place behind the content */
+    border-radius: 8px; /* Optional: apply rounded corners */
+}
+
+#btn{
+    background: #bd16b7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 300 ease-in-out;
+    
+}
+#btn:hover{
+    border: 2px solid #bd16b7;
+    background: transparent;
+    color: white;
+}

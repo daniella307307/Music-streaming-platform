@@ -29,7 +29,7 @@ const login = async (req, res) => {
     if (!user) {
         res.status(404).json({message:"User not found"})
     }
-    hashedPassword = bcrypt(password, 10)
+    let hashedPassword = bcrypt(password, 10)
     try {
       if(user.password === hashedPassword) {  
         const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET, {expiresIn: '1h'});

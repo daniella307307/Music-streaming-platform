@@ -1,0 +1,42 @@
+/* Container styles */
+#bg {
+    background: url('../signup/headsets.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #sign {
+    background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background to the form */
+    padding: 30px;
+    border-radius: 15px;
+    width: 35%;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure the sign-up form stays above other elements */
+  }
+  
+  #btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #btn:hover {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+  }
+  
+  #sign img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%; /* Make the image responsive */
+    z-index: 1;
+    opacity: 0.5; /* Optional: Slight opacity to blend into background */
+  }
+  
