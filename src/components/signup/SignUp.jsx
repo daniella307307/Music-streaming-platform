@@ -21,10 +21,10 @@ function SignUp() {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8080/signup', formData);
+      const response = await axios.post('http://127.0.0.1:8080/api/v1/signup', formData);
       if (response.status === 200) {
         alert('User created successfully');
-        window.location.href = '/'; 
+        window.location.href = '/dashboard'; 
       } else {
         alert(response.data.message);
       }

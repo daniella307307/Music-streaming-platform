@@ -14,16 +14,14 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
     try {
-      const response = await axios.post('http://localhost:8080/login', formData);
+      const response = await axios.post('http://127.0.0.1:8080/api/v1/login', formData);
       if (response.status === 200) {
-        alert('Logged in successfully');
-        // Redirect to the dashboard or perform another action
+        window.location.href= '/dashboard'
       } else {
         alert(response.message);
       }
     } catch (error) {
       if (error.response) {
-        // Access error message if available
         alert('Error: ' + (error.response.data.message || 'Invalid credentials'));
       } else {
         alert("An error occurred. Please try again later.");
