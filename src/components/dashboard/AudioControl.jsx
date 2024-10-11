@@ -1,20 +1,40 @@
 import React, { useState, useEffect } from 'react';
 
-function AudioControl({ tracks, onTrackChange }) {
+function AudioControl({ onTrackChange }) {
+  const [tracks, setTracks] = useState([]); // State for storing tracks
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState(new Audio());
+  const [loading, setLoading] = useState(true); // State for loading status
+  const [error, setError] = useState(null); // State for error handling
 
   useEffect(() => {
-    // Check if tracks are available
+    const fetchTracks = async (album) => {
+      try {
+        const response = await fetch(`http://localhost:8080/api/v1/getTracksByAlbumId/${album._id}`); // Replace with your API endpoint
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setTracks(data.tracks || []); // Adjust according to your API response structure
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTracks();
+  }, []); // Empty dependency array to run once on mount
+
+  useEffect(() => {
     if (tracks.length > 0) {
-      audio.src = tracks[currentTrackIndex]?.url || ''; // Safely access the track URL
+      audio.src = tracks[currentTrackIndex]?.audioURL || ''; // Use the audioURL for YouTube embeds
       if (isPlaying) {
         audio.play();
       }
     }
 
-    // Cleanup the audio object on component unmount
     return () => {
       audio.pause();
       audio.src = '';
@@ -45,6 +65,15 @@ function AudioControl({ tracks, onTrackChange }) {
       return prevIndexValue;
     });
   };
+
+  // Handle loading and error states
+  if (loading) {
+    return <div className="text-white">Loading tracks...</div>;
+  }
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>; // Show error message
+  }
 
   if (tracks.length === 0) {
     return <div className="text-white">No tracks available</div>; // Handle no tracks case

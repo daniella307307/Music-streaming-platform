@@ -3,7 +3,6 @@ import Sidebar from './Sidebar';
 import './style.css';
 import Popular from './Popular';
 import Featured from './Featured';
-import AudioControl from './AudioControl';
 
 function Dashboard() {
   return (
@@ -15,7 +14,6 @@ function Dashboard() {
       <div className='ml-4 p-6 flex-1'>
         <Popular/>
         <Featured/>
-        <AudioControl/>
       </div>
       
     </div>

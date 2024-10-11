@@ -3,121 +3,23 @@
         "name": "After Hours",
         "coverImageUrl": "https://i.pinimg.com/564x/52/ec/1b/52ec1b590e26308eef652b623ef2d81a.jpg",
         "releaseDate": "2020-03-20",
-        "artist": "The Weeknd"
-    },
-    {
-        "name": "Folklore",
-        "coverImageUrl": "https://i.pinimg.com/564x/18/3d/af/183daf1e1bd910bf6e4acece32479f5b.jpg",
-        "releaseDate": "2020-07-24",
-        "artist": "Taylor Swift"
-    },
-    {
-        "name": "Evermore",
-        "coverImageUrl": "https://i.pinimg.com/736x/8e/63/e8/8e63e8bfa2016bad689e736fe1422722.jpg",
-        "releaseDate": "2020-12-11",
-        "artist": "Taylor Swift"
-    },
-    {
-        "name": "Positions",
-        "coverImageUrl": "https://i.pinimg.com/enabled/564x/a6/1c/f1/a61cf175e0ad88637d4dcca168b841e0.jpg",
-        "releaseDate": "2020-10-30",
-        "artist": "Ariana Grande"
-    },
-    {
-        "name": "Dangerous",
-        "coverImageUrl": "https://i.pinimg.com/564x/fd/4d/f0/fd4df0c7611b0f0109a30b028c47a03d.jpg",
-        "releaseDate": "2021-05-07",
-        "artist": "Morgan Wallen"
-    },
-    {
-        "name": "Justice",
-        "coverImageUrl": "https://i.pinimg.com/enabled/564x/5f/26/ff/5f26ffed2adbeae916d512e91e766545.jpg",
-        "releaseDate": "2021-03-19",
-        "artist": "Justin Bieber"
-    },
-    {
-        "name": "Life Support",
-        "coverImageUrl": "https://i.pinimg.com/564x/66/eb/f8/66ebf88afc2c26d44f5a69f2e06276b7.jpg",
-        "releaseDate": "2021-02-26",
-        "artist": "Madison Beer"
-    },
-    {
-        "name": "Happier Than Ever",
-        "coverImageUrl": "https://i.pinimg.com/enabled/564x/41/72/ce/4172ced4a54f68048b750f1e7fc544ba.jpg",
-        "releaseDate": "2021-07-30",
-        "artist": "Billie Eilish"
-    },
-    {
-        "name": "Scaled and Icy",
-        "coverImageUrl": "https://i.pinimg.com/enabled/564x/19/0b/fd/190bfd61460ecec35a653c630bd51c03.jpg",
-        "releaseDate": "2021-05-21",
-        "artist": "Twenty One Pilots"
-    },
-    {
-        "name": "30",
-        "coverImageUrl": "https://i.pinimg.com/564x/13/6f/1c/136f1c66bbd655a9b9007e13ce0b999e.jpg",
-        "releaseDate": "2021-11-19",
-        "artist": "Adele"
-    },
-  
-
-    {
-        "name": "SOUR",
-        "coverImageUrl": "https://i.pinimg.com/enabled/564x/8a/38/ad/8a38ad716d3f9ba83c29481871a6c7a7.jpg",
-        "releaseDate": "2021-05-21",
-        "artist": "Olivia Rodrigo"
-    },
-    {
-        "name": "Fearless (Taylor's Version)",
-        "coverImageUrl": "https://i.pinimg.com/564x/5f/82/92/5f8292ce9722c39d172767424f0f059e.jpg",
-        "releaseDate": "2021-04-09",
-        "artist": "Taylor Swift"
-    },
-    {
-        "name": "Hot Pink",
-        "coverImageUrl": "https://i.pinimg.com/564x/c2/81/8f/c2818fd1a43a3b4baa01f4b58737cfb0.jpg",
-        "releaseDate": "2019-11-07",
-        "artist": "Doja Cat"
-    },
-   
-    {
-        "name": "After Hours",
-        "coverImageUrl": "https://i.pinimg.com/564x/30/74/f5/3074f515b1d1897cf8be0c60f68be64c.jpg",
-        "releaseDate": "2020-03-20",
-        "artist": "The Weeknd"
-    },
-   
-
-    {
-        "name": "Happier Than Ever",
-        "coverImageUrl": "https://i.pinimg.com/564x/02/57/b0/0257b046dc530e50f764e5b7ccfb3bc8.jpg",
-        "releaseDate": "2021-07-30",
-        "artist": "Billie Eilish"
-    },
-    {
-        "name": "Scaled and Icy",
-        "coverImageUrl": "https://i.pinimg.com/564x/cf/c9/53/cfc9531e1f3e134e5c65998d8c773634.jpg",
-        "releaseDate": "2021-05-21",
-        "artist": "Twenty One Pilots"
-    },
-    {
-        "name": "An Evening with Silk Sonic",
-        "coverImageUrl": "https://i.pinimg.com/564x/d9/89/c5/d989c59e08e34404e501c8c36b44c3f9.jpg",
-        "releaseDate": "2021-11-12",
-        "artist": "Bruno Mars & Anderson .Paak"
-    },
-   
-    {
-        "name": "Fearless (Taylor's Version)",
-        "coverImageUrl": "https://i.pinimg.com/564x/91/7e/7e/917e7e9b70d5f7d7e1a9f5b5a4cd1bc6.jpg",
-        "releaseDate": "2021-04-09",
-        "artist": "Taylor Swift"
-    },
-    {
-        "name": "Hot Pink",
-        "coverImageUrl": "https://i.pinimg.com/564x/12/45/7d/12457d5e02ed9cc474e1d4ac9f758d9b.jpg",
-        "releaseDate": "2019-11-07",
-        "artist": "Doja Cat"
+        "artist": "The Weeknd",
+        "tracks": [
+            {
+                "title": "Alone Again",
+                "duration": "4:11",
+                "audioURL": "https://youtu.be/embed/JH398xAYpZA"
+            },
+            {
+                "title": "Save Your Tears",
+                "duration": "3:36",
+                "audioURL": "https://www.youtube.com/embed/u6lihZAcy4s"
+            },
+            {
+                "title": "Hardest to Love",
+                "duration": "3:12",
+                "audioURL": "https://youtu.be/embed/pM3nIOYF2W8"
+            }
+        ]
     }
-
 ]

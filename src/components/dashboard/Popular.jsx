@@ -115,7 +115,7 @@ function Popular() {
       </div>
 
       <div className="mt-4 text-center">
-        <h1 className="text-gray-200 text-2xl ml-[1.5em] font-bold">
+        <h1 className="text-gray-200 text-2xl ml-[1em] font-bold">
           {visibleAlbums[2].name}
         </h1>
       </div>

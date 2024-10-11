@@ -7,10 +7,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loading from "./Loading";
+import AudioControl from "./AudioControl"; // Import the AudioControl component
 
 function Featured() {
   const [albums, setAlbums] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTracks, setCurrentTracks] = useState([]); // State for current tracks
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -63,20 +65,16 @@ function Featured() {
     );
   };
 
-
-  const handleAlbumClick = async (album)=>{
+  const handleAlbumClick = async (album) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/v1/getTracksByAlbumId/${album._id}`);
-       const albumData = response.data;
-       playTracks(albumData.tracks);
+      const response = await axios.get(
+        `http://localhost:8080/api/v1/getTracksByAlbumId/${album._id}`
+      );
+      const albumData = response.data;
+      setCurrentTracks(albumData.tracks); // Set the current tracks state
     } catch (error) {
       console.error("Error fetching tracks for album", error);
     }
-  }
-  const playTracks = (tracks) => {
-    const audioElement = document.createElement('audio');
-    audioElement.src = tracks[0].audioURL; // Replace with your audio URL
-    audioElement.play();
   };
 
   return (
@@ -96,42 +94,40 @@ function Featured() {
 
         {/* Albums */}
         <div className="flex justify-between items-center space-x-[4em]">
-          {visibleAlbums.map((album, index) => {
-            return (
-              <div
-                key={index}
-                className="relative w-[15em] h-[18em] cursor-pointer transition-transform duration-300 transform hover:scale-105"
-              >
-                <div className="absolute inset-0 w-full h-full rounded-lg before:content-[''] before:absolute before:inset-0 before:bg-blue-400 before:blur-3xl before:opacity-50 before:rounded-full" />
-                <div>
-                  {/* Play Button */}
-                  <button
-                    className="absolute top-[4em] right-3 text-5xl text-blue-700 shadow-lg hover:text-blue-400 transition z-20"
-                    onClick={(e) => {
-                      e.stopPropagation(); // Prevent triggering album click
-                      handleAlbumClick(album);
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faPlayCircle} />
-                  </button>
+          {visibleAlbums.map((album, index) => (
+            <div
+              key={index}
+              className="relative w-[15em] h-[18em] cursor-pointer transition-transform duration-300 transform hover:scale-105"
+            >
+              <div className="absolute inset-0 w-full h-full rounded-lg before:content-[''] before:absolute before:inset-0 before:bg-blue-400 before:blur-3xl before:opacity-50 before:rounded-full" />
+              <div>
+                {/* Play Button */}
+                <button
+                  className="absolute top-[4em] right-3 text-5xl text-blue-700 shadow-lg hover:text-blue-400 transition z-20"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering album click
+                    handleAlbumClick(album);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faPlayCircle} />
+                </button>
 
-                  {/* Album Cover Image */}
-                  <img
-                    src={album.coverImageUrl}
-                    alt={album.name}
-                    className="relative z-10 w-full h-[14em] object-cover shadow-lg"
-                  />
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black to-transparent rounded-b-lg">
-                  <h2 className="text-white font-bold text-center">
-                    {album.name}
-                  </h2>
-                  <p className="text-gray-300 text-center">{album.artist}</p>
-                </div>
+                {/* Album Cover Image */}
+                <img
+                  src={album.coverImageUrl}
+                  alt={album.name}
+                  className="relative z-10 w-full h-[14em] object-cover shadow-lg"
+                />
               </div>
-            );
-          })}
+
+              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black to-transparent rounded-b-lg">
+                <h2 className="text-white font-bold text-center">
+                  {album.name}
+                </h2>
+                <p className="text-gray-300 text-center">{album.artist}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Right Chevron */}
@@ -142,6 +138,9 @@ function Featured() {
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
+
+      {/* Audio Control Component */}
+      <AudioControl tracks={currentTracks} onTrackChange={setCurrentTracks} />
     </div>
   );
 }
