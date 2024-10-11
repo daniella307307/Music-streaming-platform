@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Reputation",
+      "coverImageUrl": "https://i.pinimg.com/564x/12/97/78/129778e4b1e4c8456344c3e31d18825e.jpg",
+      "releaseDate": "2023-09-15",
+      "artist": "John Doe"
+    },
+    {
+      "name": "Lover",
+      "coverImageUrl": "https://i.pinimg.com/736x/c6/b7/5e/c6b75edc81946c9e3c5effaff706069a.jpg",
+      "releaseDate": "2021-05-22",
+      "artist": "Jane Smith"
+    },
+    {
+      "name": "STARBOY",
+      "coverImageUrl": "https://i.pinimg.com/564x/ea/83/ad/ea83ad6676f30f3f8297b8b524c3d3d8.jpg",
+      "releaseDate": "2020-11-11",
+      "artist": "The weeknd"
+    },
+    {
+      "name": "FUTUE NOSTLAGIA",
+      "coverImageUrl": "https://i.pinimg.com/564x/f6/1a/2b/f61a2b1d5623d6f088fba1c021323b46.jpg",
+      "releaseDate": "2019-06-01",
+      "artist": "Dua lipa"
+    },
+    {
+      "name": "CHANGES",
+      "coverImageUrl": "https://i.pinimg.com/564x/16/4e/5f/164e5f3a1efbce8f48c1f8ac2f675ec2.jpg",
+      "releaseDate": "2018-08-25",
+      "artist": "Justin Bieber"
+    },
+    {
+        "name": "LOUD",
+        "coverImageUrl": "https://i.pinimg.com/564x/20/1b/d2/201bd277f0a3d0eda3c5a330c2366790.jpg",
+        "releaseDate": "2018-08-25",
+        "artist": "Justin Bieber"
+      }
+  ]
+  
