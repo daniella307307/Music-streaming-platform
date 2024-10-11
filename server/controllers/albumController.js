@@ -75,3 +75,19 @@ exports.deleteAlbum = async (req, res) => {
     res.status(500).json({ message: 'Server error', error });
   }
 };
+
+exports.getTrackById = async(req,res) =>{
+    try{
+        const album = await Album.findById(req.params.albumId);
+        if(!album){
+            return res.status(404).json({message: 'Album not found'});
+        }
+        const track = album.tracks.id(req.params.trackId);
+        if(!track){
+            return res.status(404).json({message: 'Track not found'});
+        }
+        res.status(200).json(track);
+    }catch(error){
+        res.status(500).json({message: 'Server error', error});
+    }
+}

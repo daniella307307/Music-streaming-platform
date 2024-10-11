@@ -61,23 +61,23 @@ function Popular() {
   };
 
   return (
-    <div className="items-center justify-center h-[100vh] relative">
+    <div className="items-center justify-center h-[50vh] relative">
       <div className="space-y-4">
         <h1 className="text-gray-400 text-md">Albums</h1>
         <h1 className="text-gray-200 text-2xl font-bold">Popular</h1>
       </div>
 
-      <div className="relative flex justify-center items-center space-x-6 ml-[4em] mt-[3em]">
+      <div className="relative flex justify-center items-center space-x-6 ml-[1em] mt-[3em]">
         {/* Left Chevron */}
         <button
           onClick={handlePrev}
-          className="absolute left-[-3em] h-[4em] w-[3em] mr-[2em] bg-blue-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-blue-700 transition"
+          className="absolute left-[.5em] h-[4em] w-[3em] bg-blue-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-blue-700 transition"
         >
         <FontAwesomeIcon icon={faChevronLeft}/>
         </button>
 
         {/* Albums */}
-        <div className="flex justify-between items-center space-x-20">
+        <div className="flex justify-between items-center space-x-[4em]">
           {visibleAlbums.map((album, index) => {
             const isCenter = index === 2;
             return (
@@ -108,14 +108,14 @@ function Popular() {
         {/* Right Chevron */}
         <button
           onClick={handleNext}
-          className="absolute right-[-5em] h-[4em] w-[3em]  bg-blue-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-blue-700 transition"
+          className="absolute right-[-1em] mr-[1em] h-[4em] w-[3em]  bg-blue-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-blue-700 transition"
         >
           <FontAwesomeIcon icon={faChevronRight}/>
         </button>
       </div>
 
       <div className="mt-4 text-center">
-        <h1 className="text-gray-200 text-2xl ml-[3.6em] font-bold">
+        <h1 className="text-gray-200 text-2xl ml-[1.5em] font-bold">
           {visibleAlbums[2].name}
         </h1>
       </div>

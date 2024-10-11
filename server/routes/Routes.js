@@ -21,5 +21,7 @@ router.put('/:id', albumController.updateAlbum);
 
 // Delete album by ID
 router.delete('/:id', albumController.deleteAlbum);
+router.get('/:track', albumController.getTrackById)
+
 
 module.exports = router;
